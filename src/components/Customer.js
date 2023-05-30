@@ -162,10 +162,10 @@ export default function Customer() {
                     }}
                   >
                     <option value=''>--분류--</option>
-                    <option value='100'>칭찬</option>
-                    <option value='200'>불만</option>
-                    <option value='300'>문의</option>
-                    <option value='400'>제안</option>
+                    <option value='칭찬'>칭찬</option>
+                    <option value='불만'>불만</option>
+                    <option value='문의'>문의</option>
+                    <option value='제안'>제안</option>
                   </select>
                 </div>
                 <div className='div_style'>
@@ -201,8 +201,8 @@ export default function Customer() {
                   />
                   <select
                     className='none-css'
-                    id='form_pay_time'
-                    name='form_pay_time'
+                    id='pay_time'
+                    name='pay_time'
                     style={{
                       marginLeft: '10px',
                       width: '100px',
