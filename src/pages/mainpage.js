@@ -42,7 +42,7 @@ function Mainpage() {
           보양식같은 음식을 제공합니다.
         </div>
         <img src={subLogo2} alt='subLogo2' id='subLogo2' />
-        <div className='main_content3'>
+        <div className='main_content4'>
           대표적으로 쫄깃한 식감으로 씹을수록 육수의 맛이 세어나오는
           <br />
           도가니가 들어간 “차돌양지도가니쌀국수”가 있습니다.
@@ -54,7 +54,7 @@ function Mainpage() {
           <br />
         </div>
         <img src={subLogo3} alt='subLogo3' id='subLogo3' />
-        <div className='main_content3'>
+        <div className='main_content4'>
           더빛남은 모두가 훌륭한 식사를 더욱 풍성하게
           <br />
           즐길 수 있도록 빛나는 장소들을 연구 중입니다.
