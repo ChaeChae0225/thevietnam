@@ -1,0 +1,30 @@
+.choose_box{
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    align-items: flex-end;
+}
+
+.choose_box1.active {
+    margin: 15px;
+    border-bottom: 2px solid black;
+    font-size: large;
+    font-weight: bold;
+}
+
+.choose_box2.active {
+    margin: 15px;
+    border-bottom: 2px solid black;
+    font-size: large;
+    font-weight: bold;
+}
+
+.choose_box1 {
+    margin: 15px;
+}
+
+.choose_box2 {
+    margin: 15px;
+}

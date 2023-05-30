@@ -1,0 +1,12 @@
+#mainLogo {
+    width: 640px;
+    height: 990px;
+}
+
+.home_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+} 

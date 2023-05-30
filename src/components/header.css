@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.content_box{
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 85px;
+}
+
+.header_title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 120px;
+}
+
+.nav{
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    width: 86px;
+}
+
+#topLogo{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
