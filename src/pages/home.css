@@ -1,7 +1,13 @@
 #mainLogo {
-    width: 640px;
-    height: 990px;
+    max-width: 100%;
+    height: auto;
 }
+@media screen and (max-width: 600px) {
+    #mainLogo {
+      width: 50%;
+      height: 50%;
+    }
+  }
 
 .home_box {
     display: flex;
