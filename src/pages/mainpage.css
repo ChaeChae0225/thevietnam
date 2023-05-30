@@ -1,9 +1,3 @@
-@media screen and (max-width: 600px) {
-    #mainLogo {
-      width: 100%;
-      height: 100%;
-    }
-  }
 
   #mainLogo {
     width: 100%;
@@ -15,11 +9,21 @@ img{
     width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+    .content_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+  }
+
 .content_box{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .main_content1{
     white-space: pre-line;
     display: flex;
