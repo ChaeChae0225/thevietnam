@@ -394,7 +394,8 @@ export default function Customer() {
                   >
                     <option value=''>직접입력</option>
                     <option value='naver.com'>naver.com</option>
-                    <option value='hanmail.net'>hanmail.net</option>
+                    <option value='gmail.com'>gmail.com</option>
+                    <option value='daum.net'>daum.net</option>
                     <option value='google.com'>google.com</option>
                   </select>
                 </div>
