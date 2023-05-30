@@ -68,6 +68,23 @@ img{
     font-size: 21px;
 }
 
+@media screen and (max-width: 600px) {
+    .main_content2{
+        white-space: pre-line;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid black;
+        height: 300px;
+        width: 80%;
+        justify-content: center;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1);
+        font-family: 'Noto Serif KR', serif;
+        font-size: 21px;
+    }
+  }
+
 .main_content3{
     white-space: pre-line;
     display: flex;
@@ -84,6 +101,25 @@ img{
     font-family: 'Noto Serif KR';
     font-size: 21px;
 }
+
+@media screen and (max-width: 600px) {
+    .main_content3{
+        white-space: pre-line;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    height: 400px;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1), 0 -4px 4px -2px rgba(0, 0, 0, 0.1);
+    font-family: 'Noto Serif KR';
+    font-size: 21px;
+    }
+  }
 
 .img_size{
     overflow: hidden;

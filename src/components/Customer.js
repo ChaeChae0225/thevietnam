@@ -45,23 +45,28 @@ export default function Customer() {
 
     setWordCount(byteCount);
   }
-  const sendEmail = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const form = e.currentTarget; // 변경된 부분
+
     const templateParams = {
-      form_type1: document.getElementById('form_type1').value,
-      visit_day: document.getElementById('visit_day').value,
-      pay_time: document.getElementById('pay_time').value,
-      order_menu: document.getElementById('order_menu').value,
-      form_answer: document.getElementById('form_answer').value,
-      from_name: document.getElementById('form_name').value,
+      form_type1: form.form_type1.value,
+      visit_day: form.visit_day.value,
+      pay_time: form.pay_time.value,
+      order_menu: form.order_menu.value,
+      form_answer: form.form_answer.value,
+      form_name: form.form_name.value,
       to_name: '고객문의',
-      request_cellphone1: document.getElementById('request_cellphone1').value,
-      request_cellphone2: document.getElementById('request_cellphone2').value,
-      request_cellphone3: document.getElementById('request_cellphone3').value,
-      form_email: document.getElementById('form_email').value,
-      form_email_domain2: document.getElementById('form_email_domain2').value,
-      form_title: document.getElementById('form_title').value,
-      form_content: document.getElementById('form_content').value,
+      request_cellphone1: form.request_cellphone1.value,
+      request_cellphone2: form.request_cellphone2.value,
+      request_cellphone3: form.request_cellphone3.value,
+      form_email: form.form_email.value,
+      form_email_domain: form.form_email_domain2.value,
+      form_title: form.form_title.value,
+      form_content: form.form_content.value,
     };
+
     emailjs
       .send(
         'service_cfecwow',
@@ -71,6 +76,7 @@ export default function Customer() {
       )
       .then((response) => {
         console.log('Email sent successfully!', response.status, response.text);
+        form.reset();
       })
       .catch((error) => {
         console.error('Error sending email:', error);
@@ -106,7 +112,7 @@ export default function Customer() {
             <p style={{ fontSize: '150px' }}></p>
           </div>
           <div
-            className='div_border2'
+            className='div_border'
             style={{
               height: '107px',
             }}
@@ -135,6 +141,7 @@ export default function Customer() {
             <form onSubmit={sendEmail}>
               <div
                 style={{
+                  blockSize: '750px',
                   marginBottom: '10px',
                   width: '800px',
                 }}
@@ -172,6 +179,9 @@ export default function Customer() {
                     id='visit_day'
                     type='text'
                     placeholder='연도-월-일'
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') e.preventDefault();
+                    }}
                   />
                 </div>
                 <div className='div_style'>
@@ -185,6 +195,9 @@ export default function Customer() {
                     id='pay_time'
                     className='input_style'
                     style={{ marginRight: 'px' }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') e.preventDefault();
+                    }}
                   />
                   <select
                     className='none-css'
@@ -219,6 +232,9 @@ export default function Customer() {
                     name='order_menu'
                     id='order_menu'
                     className='input_style'
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') e.preventDefault();
+                    }}
                   />
                 </div>
 
@@ -273,6 +289,9 @@ export default function Customer() {
                     id='form_name'
                     required=''
                     className='input_style'
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') e.preventDefault();
+                    }}
                   />
                 </div>
 
@@ -316,6 +335,9 @@ export default function Customer() {
                         name='request_cellphone2'
                         required=''
                         maxlength='4'
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') e.preventDefault();
+                        }}
                       />
                     </td>
                     <td>
@@ -326,6 +348,9 @@ export default function Customer() {
                         name='request_cellphone3'
                         required=''
                         maxlength='4'
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') e.preventDefault();
+                        }}
                       />
                     </td>
                   </tr>
@@ -344,6 +369,9 @@ export default function Customer() {
                     id='form_email'
                     className='email_style'
                     style={{ marginLeft: '50px' }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') e.preventDefault();
+                    }}
                   />
                   <em className='at'>@</em>
                   <input
@@ -353,6 +381,9 @@ export default function Customer() {
                     value={emailDomain}
                     className='email_style'
                     onChange={handleDomainChange}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') e.preventDefault();
+                    }}
                   />
 
                   <select
@@ -378,6 +409,9 @@ export default function Customer() {
                     id='form_title'
                     required=''
                     className='title_style'
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') e.preventDefault();
+                    }}
                   />
                 </div>
                 <div className='div_style'>
@@ -440,7 +474,7 @@ export default function Customer() {
                 <button
                   style={{
                     background: '#085427',
-                    fontSize: '10px',
+                    fontSize: '15px',
                     marginTop: '20px',
                   }}
                   type='submit'
@@ -450,7 +484,7 @@ export default function Customer() {
                 <button
                   style={{
                     background: '#085427',
-                    fontSize: '10px',
+                    fontSize: '15px',
                     marginLeft: '20px',
                     marginTop: '20px',
                   }}
