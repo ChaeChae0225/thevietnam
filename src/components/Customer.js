@@ -75,6 +75,7 @@ export default function Customer() {
         'ANyB8NebXtDaB2dpR'
       )
       .then((response) => {
+        alert('문의 등록 완료 되었습니다.');
         console.log('Email sent successfully!', response.status, response.text);
         form.reset();
       })
