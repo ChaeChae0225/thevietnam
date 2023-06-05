@@ -45,10 +45,10 @@ export default function Consulting() {
     setWordCount(byteCount);
   }
 
-  const sendEmail = (event) => {
-    event.preventDefault();
+  const sendEmail = (e) => {
+    emailDomain.preventDefault();
 
-    const form = event.target;
+    const form = e.target;
 
     const templateParams = {
       form_name: form.form_name.value,
@@ -112,7 +112,14 @@ export default function Consulting() {
               성 함<span className='span_box'>*</span>
             </p>
             <div className='input_divc'>
-              <input type='text' name='form_name' id='form_name'></input>
+              <input
+                type='text'
+                name='form_name'
+                id='form_name'
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.preventDefault();
+                }}
+              ></input>
             </div>
           </div>
           <div className='cborder_box'>
@@ -139,6 +146,9 @@ export default function Consulting() {
                 type='text'
                 name='request_cellphone2'
                 id='request_cellphone2'
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.preventDefault();
+                }}
               ></input>
             </div>
             <div className='input_divc'>
@@ -147,6 +157,9 @@ export default function Consulting() {
                 type='text'
                 name='request_cellphone3'
                 id='request_cellphone3'
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.preventDefault();
+                }}
               ></input>
             </div>
           </div>
@@ -156,7 +169,14 @@ export default function Consulting() {
               <span className='span_box'>*</span>
             </p>
             <div className='input_divc'>
-              <input type='text' name='form_email' id='form_email'></input>
+              <input
+                type='text'
+                name='form_email'
+                id='form_email'
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.preventDefault();
+                }}
+              ></input>
             </div>
             <div className='input_divc'>
               <span>@</span>
@@ -166,11 +186,15 @@ export default function Consulting() {
                 id='form_email_domain2'
                 value={emailDomain}
                 onChange={handleDomainChange}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.preventDefault();
+                }}
               ></input>
               <select
                 className='myselect'
                 id='form_email_domain'
                 name=''
+                value=''
                 onChange={handleDomainChange}
               >
                 <option value=''>직접입력</option>
@@ -184,6 +208,8 @@ export default function Consulting() {
           <div className='cborder_box'>
             <p className='con_p'>추가 내용</p>
             <textarea
+              name='form_content'
+              id='form_content'
               placeholder=' 추가문의 사항이 있는 경우 남겨주세요.'
               onKeyUp={handleChange}
             ></textarea>
@@ -213,6 +239,9 @@ export default function Consulting() {
               name='person_field'
               id='person_y'
               value='동의합니다.'
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') e.preventDefault();
+              }}
             ></input>
             <label htmlFor='person_y'>동의합니다.</label>
             <input
@@ -221,6 +250,9 @@ export default function Consulting() {
               name='person_field'
               id='person_n'
               value='동의하지 않습니다.'
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') e.preventDefault();
+              }}
             ></input>
             <label htmlFor='person_n'>동의하지 않습니다.</label>
           </div>
@@ -241,6 +273,9 @@ export default function Consulting() {
                 name='person_field2'
                 id='person_y2'
                 value='동의합니다.'
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.preventDefault();
+                }}
               />
               <label htmlFor='person_y2'>동의합니다.</label>
               <input
@@ -249,6 +284,9 @@ export default function Consulting() {
                 name='person_field2'
                 id='person_n2'
                 value='동의하지 않습니다.'
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.preventDefault();
+                }}
               />
               <label htmlFor='person_n2'>동의하지 않습니다.</label>
             </div>
