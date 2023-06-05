@@ -1,82 +1,62 @@
+* {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  
+}
 
+.span_box{
+  color: red;
+  margin-left: 5px;
+}
 
-.Consulting {
-  white-space:pre-line;
+.input_divc{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.input_phone{
+  height: 20px;
+  width: 70px;
+}
+
+.myselect{
+  width: 100px;
+  height: 25px;
+}
+.phone_sel{
+  height: 25px;
+  width: 70px;
+  margin-left: 10px;
+}
+
+.con_p {
+  margin-left: 5px;
+  width: 150px;
+}
+
+
+.info_box1{
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.info_box2{
+  background-color: rgb(238, 238, 238); 
+ 
+  padding: 10px; 
+  width: 80%;
+  display: flex;
+  justify-content: right;
   align-items: center;
 }
 
-
-.div_color1 {
-  height: 100%;
-  width: 100%;
-  margin-top: 10px;
-}
-
-  @media screen and (max-width: 600px) {
-  .div_color1 {
-    display: flex;
-    align-items: center;
-      height: 100%;
-      width: 50%;
-      margin-left: 650px;
-  }
-}
-
-.div_border {
-  border-bottom: 3px solid #085427;
- 
-}
-
-.phone_border{
-  border-bottom: 1px solid #000;
-  width : 1200px
-}
-
-.div_style {
-    border-bottom: 1px solid #000;
-    width : 1200px;
-  }
-
-.input_style {
-    width: 150px;
-    height: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-}
-.email_style {
-  width: 200px;
-  height: 20px;
-  margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-
-.label_style{
-  margin-top: 5px;
-  margin-left: 10px;
-  font-size: 15px;
-  color : #085427;
-  font-family : font1;
-}
-
-.title_style{
-  width: 400px;
-  height: 20px;
-   margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 10px;
-
-}
 button {
   padding: 10px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   border: 0 none;
   border-radius: 6px;
@@ -84,32 +64,130 @@ button {
   background-color: solid #085427;
 }
 
-.label_div{
-  width: 80px;
-  height: 80px;
+
+.input_box{
+  margin-top: 5px;
+  width: 30px;
+}
+
+textarea{
+  width: 1000px;
+  height: 100px;
+  margin: 10px;
+}
+
+input{
+  width: 100%;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.left_box{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+}
+.left_box1{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 70%;
+  font-size: 15px;
+}
+
+.cborder_box{
+  border-bottom: solid 1px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90%;
+}
+
+.first_boxc {
+  background-color: #EEEEEE;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.process_boxc {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
+  background-color: white;
+  height: 1050px;
+  width: 1400px;
+}
+
+.process_box1c {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 15px;
-  margin-top: 5px;
-}
-
-.Consulting .div_style {
-  display: flex;
   align-items: center;
+  width: 100%;
+  border-bottom: 3px solid #085427;
+  border-top: 3px solid #085427;;
+  height: 120px;
 }
 
-
-
-.Consulting .div_style label {
-  flex: 0  80px;
-  white-space: nowrap; /* 텍스트가 한 줄에 표시되도록 설정 */
-}
-
-
-.span_style{
+form{
   display: flex;
-  align-items: flex-end;
-  width: 1200px;
-  font-size: 13px;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 1050px;
+  width: 1400px;
+}
+
+.process_titlec {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.process_box2c {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.process_box3c {
+  margin: 30px;
+  height: 300px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 20px;
+
+}
+
+@media screen and (max-width: 1000px) {
+  
+  .first_boxc {
+      background-color: #EEEEEE;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .process_boxc {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      background-color: white;
+      height: 100%;
+      width: 100%;
+  }
+  form{
+    display: flex;
+      align-items: center;
+      margin: 20px;
+      background-color: white;
+      height: 100%;
+      width: 100%;
+  }
+  
 }
