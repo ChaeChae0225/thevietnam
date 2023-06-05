@@ -189,5 +189,16 @@ form{
       height: 100%;
       width: 100%;
   }
+
+  .process_box1c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 3px solid #085427;
+    border-top: 3px solid #085427;;
+    height: 150px;
+  }
   
 }
