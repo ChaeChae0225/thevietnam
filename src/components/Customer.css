@@ -1,83 +1,76 @@
+* {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  
+}
 
-.Customer {
-  white-space: pre-line;
+.span_color{
+  color: red;
+  margin-left: 5px;
+}
+
+.process_sub_title{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+
 }
 
-
-.span_style{
+.input_div{
   display: flex;
-  align-items: flex-end;
-  width: 1200px;
-  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
 }
 
-.div_color {
-  height: 100%;
-  width: 100%;
-  margin-top: 10px;
-}
-@media screen and (max-width: 600px) {
-  .div_color {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 10px;
-  }
+
+.label_color{
+  color: #6f6f6f; 
 }
 
-  @media screen and (max-width: 600px) {
-  .div_color {
-    display: flex;
-    align-items: center;
-      height: 100%;
-      width: 50%;
-  }
-}
-
-.h4_style{
-  display: flex; align-items: center; justify-content: center; height: 60px;
-}
-.div_border {
-  border-bottom: 3px solid #085427;
-}
-
-.div_border2 {
-  border-bottom: 3px solid #085427;
-}
-
-.div_style {
-  width: 100%;
-    border-bottom: 1px solid #000;
-  }
-
-.input_style {
-    width: 150px;
-    height: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-}
-.email_style {
-  width: 200px;
+.input_phone{
   height: 20px;
-  margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+  width: 70px;
+}
 
+.myselect{
+  width: 100px;
+  height: 25px;
 }
-.phone_border{
-  border-bottom: 1px solid #000;
-  width : 1200px
+.phone_sel{
+  height: 25px;
+  width: 70px;
+  margin-left: 10px;
 }
+
+p {
+  margin-left: 5px;
+  width: 150px;
+}
+
+
+.info_box1{
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.info_box2d{
+  background-color: rgb(238, 238, 238); 
+ margin-top: 50px;
+  padding: 10px; 
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
 button {
   padding: 10px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   border: 0 none;
   border-radius: 6px;
@@ -85,45 +78,157 @@ button {
   background-color: solid #085427;
 }
 
-.label_style{
+.input_box{
   margin-top: 5px;
-  margin-left: 10px;
-  font-size: 15px;
-  color : #085427;
-  font-family : font1;
+  width: 30px;
 }
 
-.title_style{
-  width: 400px;
+textarea{
+  width: 1000px;
+  height: 300px;
+  margin: 10px;
+}
+
+input{
+  width: 100%;
   height: 20px;
-   margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 10px;
+  margin-left: 10px;
+}
+
+.left_box{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+}
+.left_box1{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 70%;
+  font-size: 15px;
+}
+
+.border_box{
+  border-bottom: solid 1px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90%;
+}
+
+.first_box {
+  background-color: #EEEEEE;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.label_div{
-  width: 80px;
-  height: 80px;
+.process_box {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin: 20px;
+  background-color: white;
+  height: 1250px;
+  width: 1400px;
 }
 
-.Customer .div_style {
+.process_box1 {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  border-bottom: 3px solid #085427;
+  border-top: 3px solid #085427;;
+  height: 120px;
 }
 
-.Customer .div_style label {
-  flex: 0  80px;
-  white-space: nowrap; /* 텍스트가 한 줄에 표시되도록 설정 */
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 1250px;
+  width: 1400px;
 }
 
-.empty{
-  height: 100px;
+.process_title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.process_box2 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.process_box3 {
+  margin: 30px;
+  height: 300px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 20px;
+
+}
+
+@media screen and (max-width: 1000px) {
+  
+  .first_box {
+      background-color: #EEEEEE;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .process_box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 3px solid #085427;
+    border-top: 3px solid #085427;;
+    height: 150px;
+  }
+  
+  .process_box {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+  }
+
+  form{
+    display: flex;
+      align-items: center;
+      margin: 20px;
+      background-color: white;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .info_box2d{
+    background-color: rgb(238, 238, 238); 
+    font-size: 10px;
+    padding: 10px; 
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  
+.process_sub_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
 }

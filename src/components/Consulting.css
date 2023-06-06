@@ -9,6 +9,14 @@
   margin-left: 5px;
 }
 
+
+.process_sub_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .input_divc{
   display: flex;
   justify-content: center;
@@ -45,12 +53,14 @@
 
 .info_box2{
   background-color: rgb(238, 238, 238); 
- 
+ margin-top: 5px;
   padding: 10px; 
   width: 80%;
   display: flex;
   justify-content: right;
   align-items: center;
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -87,6 +97,7 @@ input{
   justify-content: left;
   align-items: center;
   width: 80%;
+  margin-top: 10px;
 }
 .left_box1{
   display: flex;
@@ -200,5 +211,20 @@ form{
     border-top: 3px solid #085427;;
     height: 150px;
   }
-  
+
+  .info_box2{
+    background-color: rgb(238, 238, 238); 
+    font-size: 10px;
+    padding: 10px; 
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .process_sub_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
 }
