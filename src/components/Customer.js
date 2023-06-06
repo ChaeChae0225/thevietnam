@@ -103,16 +103,16 @@ export default function Customer() {
   return (
     <div>
       <Header />
-      <div className='first_box'>
-        <div className='process_box'>
-          <div className='process_box1'>
-            <div className='process_title'>고객의 마음</div>
-            <div className='process_sub_title'>
+      <div className='first_boxd'>
+        <div className='process_boxd'>
+          <div className='process_box1d'>
+            <div className='process_titled'>고객의 마음</div>
+            <div className='process_sub_titlemd'>
               고객님의 소중한 의견을 들려주세요! 더 나은 서비스를 제공하기 위해
               노력하고 있습니다.
             </div>
           </div>
-          <form className='' onSubmit={sendEmail}>
+          <form className='form_boxd' onSubmit={sendEmail}>
             <div className='border_box'>
               <p>
                 문의유형<span className='span_color'>*</span>
@@ -366,6 +366,7 @@ export default function Customer() {
                 <span className='span_color'>*</span>
               </p>
               <textarea
+                className='textarea_box'
                 name='form_content'
                 id='form_content'
                 placeholder=' 추가문의 사항이 있는 경우 남겨주세요.'

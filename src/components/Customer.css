@@ -9,7 +9,7 @@
   margin-left: 5px;
 }
 
-.process_sub_title{
+.process_sub_titlemd{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@ button {
   width: 30px;
 }
 
-textarea{
+.textarea_box{
   width: 1000px;
   height: 300px;
   margin: 10px;
@@ -117,7 +117,7 @@ input{
   width: 90%;
 }
 
-.first_box {
+.first_boxd{
   background-color: #EEEEEE;
   
   display: flex;
@@ -126,7 +126,7 @@ input{
 
 }
 
-.process_box {
+.process_boxd{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +136,7 @@ input{
   width: 1400px;
 }
 
-.process_box1 {
+.process_box1d{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,7 +147,7 @@ input{
   height: 120px;
 }
 
-form{
+.form_box{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,7 +156,7 @@ form{
   width: 1400px;
 }
 
-.process_title {
+.process_titled{
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -179,14 +179,14 @@ form{
 
 @media screen and (max-width: 1000px) {
   
-  .first_box {
+  .first_boxd {
       background-color: #EEEEEE;
       display: flex;
       justify-content: center;
       align-items: center;
   }
 
-  .process_box1 {
+  .process_box1d {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,7 +197,7 @@ form{
     height: 150px;
   }
   
-  .process_box {
+  .process_boxd {
     display: flex;
     align-items: center;
     margin: 20px;
@@ -206,7 +206,7 @@ form{
     width: 100%;
   }
 
-  form{
+  .form_boxd{
     display: flex;
       align-items: center;
       margin: 20px;
@@ -225,7 +225,7 @@ form{
     align-items: center;
   }
   
-.process_sub_title{
+.process_sub_titlemd{
   display: flex;
   justify-content: center;
   align-items: center;
