@@ -45,26 +45,47 @@ export default function Customer() {
 
     setWordCount(byteCount);
   }
+
+  const validateForm2 = () => {
+    if (
+      !name ||
+      !cellphone11 ||
+      !cellphone21 ||
+      !cellphone31 ||
+      !email1 ||
+      !emailDomain1 ||
+      !personField1
+    ) {
+      alert('모든 필드를 입력하시오.');
+      return false;
+    }
+    return true;
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!validateForm2()) {
+      return;
+    }
 
     const form = e.currentTarget; // 변경된 부분
 
     const templateParams = {
-      form_type1: form.form_type1.value,
-      visit_day: form.visit_day.value,
-      pay_time: form.pay_time.value,
-      order_menu: form.order_menu.value,
-      form_answer: form.form_answer.value,
-      form_name: form.form_name.value,
-      to_name: '고객문의',
-      request_cellphone1: form.request_cellphone1.value,
-      request_cellphone2: form.request_cellphone2.value,
-      request_cellphone3: form.request_cellphone3.value,
-      form_email: form.form_email.value,
-      form_email_domain: form.form_email_domain2.value,
-      form_title: form.form_title.value,
-      form_content: form.form_content.value,
+      form_type12: form.form_type12.value,
+      visit_day2: form.visit_day2.value,
+      pay_time2: form.pay_time2.value,
+      order_menu2: form.order_menu2.value,
+      form_answer2: form.form_answer2.value,
+      form_name2: form.form_name2.value,
+      to_name2: '고객문의',
+      request_cellphone12: form.request_cellphone12.value,
+      request_cellphone22: form.request_cellphone22.value,
+      request_cellphone32: form.request_cellphone32.value,
+      form_email2: form.form_email2.value,
+      form_email_domain2: form.form_email_domain2.value,
+      form_title2: form.form_title2.value,
+      form_content2: form.form_content2.value,
     };
 
     emailjs
@@ -85,19 +106,19 @@ export default function Customer() {
   };
 
   const handleCancel = () => {
-    document.getElementById('form_type1').value = '';
-    document.getElementById('visit_day').value = '';
-    document.getElementById('pay_time').value = '';
-    document.getElementById('order_menu').value = '';
-    document.getElementById('form_answer').value = '';
-    document.getElementById('form_name').value = '';
-    document.getElementById('request_cellphone1').value = '';
-    document.getElementById('request_cellphone2').value = '';
-    document.getElementById('request_cellphone3').value = '';
-    document.getElementById('form_email').value = '';
+    document.getElementById('form_type12').value = '';
+    document.getElementById('visit_day2').value = '';
+    document.getElementById('pay_time2').value = '';
+    document.getElementById('order_menu2').value = '';
+    document.getElementById('form_answer2').value = '';
+    document.getElementById('form_name2').value = '';
+    document.getElementById('request_cellphone12').value = '';
+    document.getElementById('request_cellphone22').value = '';
+    document.getElementById('request_cellphone32').value = '';
+    document.getElementById('form_email2').value = '';
     document.getElementById('form_email_domain2').value = '';
-    document.getElementById('form_title').value = '';
-    document.getElementById('form_content').value = '';
+    document.getElementById('form_title2').value = '';
+    document.getElementById('form_content2').value = '';
   };
 
   return (
@@ -119,8 +140,8 @@ export default function Customer() {
               </p>
               <div className='input_div'>
                 <select
-                  name='form_type1'
-                  id='form_type1'
+                  name='form_type12'
+                  id='form_type12'
                   style={{
                     marginLeft: '10px',
                     width: '100px',
@@ -142,8 +163,8 @@ export default function Customer() {
               <div className='input_div'>
                 <input
                   type='text'
-                  name='visit_day'
-                  id='visit_day'
+                  name='visit_day2'
+                  id='visit_day2'
                   placeholder='연도-월-일'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
@@ -158,8 +179,8 @@ export default function Customer() {
               <div className='input_div'>
                 <input
                   type='text'
-                  name='pay_time'
-                  id='pay_time'
+                  name='pay_time2'
+                  id='pay_time2'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
@@ -168,8 +189,8 @@ export default function Customer() {
               <div className='input_div'>
                 <select
                   className='none-css'
-                  id='pay_time'
-                  name='pay_time'
+                  id='pay_time2'
+                  name='pay_time2'
                   style={{
                     marginLeft: '10px',
                     width: '100px',
@@ -195,8 +216,8 @@ export default function Customer() {
               <div className='input_div'>
                 <input
                   type='text'
-                  name='order_menu'
-                  id='order_menu'
+                  name='order_menu2'
+                  id='order_menu2'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
@@ -211,7 +232,7 @@ export default function Customer() {
                 <label htmlFor='no_answer' className='label_color'>
                   받지않음
                   <input
-                    name='form_answer'
+                    name='form_answer2'
                     value='받지않음'
                     type='radio'
                     id='no_answer'
@@ -225,7 +246,7 @@ export default function Customer() {
                 <label htmlFor='sms_answer' className='label_color'>
                   문자 답변
                   <input
-                    name='form_answer'
+                    name='form_answer2'
                     value='문자 답변'
                     type='radio'
                     id='sms_answer'
@@ -237,7 +258,7 @@ export default function Customer() {
                 <label htmlFor='em_answer' className='label_color'>
                   이메일 답변
                   <input
-                    name='form_answer'
+                    name='form_answer2'
                     value='이메일 답변'
                     type='radio'
                     id='em_answer'
@@ -255,8 +276,8 @@ export default function Customer() {
               <div className='input_div'>
                 <input
                   type='text'
-                  name='form_name'
-                  id='form_name'
+                  name='form_name2'
+                  id='form_name2'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
@@ -270,8 +291,8 @@ export default function Customer() {
               </p>
               <select
                 className='phone_sel'
-                name='request_cellphone1'
-                id='request_cellphone1'
+                name='request_cellphone12'
+                id='request_cellphone12'
               >
                 <option value=''>선택</option>
                 <option value='010'>010</option>
@@ -285,8 +306,8 @@ export default function Customer() {
                 <input
                   className='input_phone'
                   type='text'
-                  name='request_cellphone2'
-                  id='request_cellphone2'
+                  name='request_cellphone22'
+                  id='request_cellphone22'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
@@ -296,8 +317,8 @@ export default function Customer() {
                 <input
                   className='input_phone'
                   type='text'
-                  name='request_cellphone3'
-                  id='request_cellphone3'
+                  name='request_cellphone32'
+                  id='request_cellphone32'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
@@ -312,8 +333,8 @@ export default function Customer() {
               <div className='input_div'>
                 <input
                   type='text'
-                  name='form_email'
-                  id='form_email'
+                  name='form_email2'
+                  id='form_email2'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
@@ -323,7 +344,7 @@ export default function Customer() {
                 <span>@</span>
                 <input
                   type='text'
-                  name='form_email_domain'
+                  name='form_email_domain2'
                   id='form_email_domain2'
                   value={emailDomain}
                   onChange={handleDomainChange}
@@ -333,7 +354,7 @@ export default function Customer() {
                 ></input>
                 <select
                   className='myselect'
-                  id='form_email_domain'
+                  id='form_email_domain2'
                   name=''
                   onChange={handleDomainChange}
                 >
@@ -352,8 +373,8 @@ export default function Customer() {
               <div className='input_div'>
                 <input
                   type='text'
-                  name='form_title'
-                  id='form_title'
+                  name='form_title2'
+                  id='form_title2'
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
@@ -367,8 +388,8 @@ export default function Customer() {
               </p>
               <textarea
                 className='textarea_box'
-                name='form_content'
-                id='form_content'
+                name='form_content2'
+                id='form_content2'
                 placeholder=' 추가문의 사항이 있는 경우 남겨주세요.'
                 onKeyUp={handleChange}
               ></textarea>

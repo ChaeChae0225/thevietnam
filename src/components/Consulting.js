@@ -45,22 +45,42 @@ export default function Consulting() {
     setWordCount(byteCount);
   }
 
-  const sendEmail = (e) => {
-    emailDomain.preventDefault();
+  const validateForm1 = () => {
+    if (
+      !name ||
+      !cellphone11 ||
+      !cellphone21 ||
+      !cellphone31 ||
+      !email1 ||
+      !emailDomain1 ||
+      !personField1
+    ) {
+      alert('모든 필드를 입력하시오.');
+      return false;
+    }
+    return true;
+  };
 
-    const form = e.target;
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!validateForm1()) {
+      return;
+    }
+
+    const form = e.currentTarget;
 
     const templateParams = {
-      form_name: form.form_name.value,
-      to_name: '가맹문의',
-      request_cellphone1: form.request_cellphone1.value,
-      request_cellphone2: form.request_cellphone2.value,
-      request_cellphone3: form.request_cellphone3.value,
-      form_email: form.form_email.value,
-      form_email_domain: form.form_email_domain2.value,
-      form_content: form.form_content.value,
-      person_field: form.person_field.value,
-      person_field2: form.person_field2.value,
+      form_name1: form.form_name1.value,
+      to_name1: '가맹문의',
+      request_cellphone11: form.request_cellphone11.value,
+      request_cellphone21: form.request_cellphone21.value,
+      request_cellphone31: form.request_cellphone31.value,
+      form_email1: form.form_email1.value,
+      form_email_domain1: form.form_email_domain21.value,
+      form_content1: form.form_content1.value,
+      person_field1: form.person_field1.value,
+      person_field21: form.person_field21.value,
     };
 
     emailjs
@@ -82,13 +102,13 @@ export default function Consulting() {
 
   const handleCancel = () => {
     // 이 함수에서는 각 입력 필드를 초기화합니다.
-    document.getElementById('form_name').value = '';
-    document.getElementById('request_cellphone1').value = '';
-    document.getElementById('request_cellphone2').value = '';
-    document.getElementById('request_cellphone3').value = '';
-    document.getElementById('form_email').value = '';
-    document.getElementById('form_email_domain2').value = '';
-    document.getElementById('form_content').value = '';
+    document.getElementById('form_name1').value = '';
+    document.getElementById('request_cellphone11').value = '';
+    document.getElementById('request_cellphone21').value = '';
+    document.getElementById('request_cellphone31').value = '';
+    document.getElementById('form_email1').value = '';
+    document.getElementById('form_email_domain21').value = '';
+    document.getElementById('form_content1').value = '';
     // 동의 라디오 버튼도 초기화합니다.
     document.getElementById('person_y').checked = false;
     document.getElementById('person_n').checked = false;
@@ -114,8 +134,8 @@ export default function Consulting() {
             <div className='input_divc'>
               <input
                 type='text'
-                name='form_name'
-                id='form_name'
+                name='form_name1'
+                id='form_name1'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
@@ -129,8 +149,8 @@ export default function Consulting() {
             </p>
             <select
               className='phone_sel'
-              name='request_cellphone1'
-              id='request_cellphone1'
+              name='request_cellphone11'
+              id='request_cellphone11'
             >
               <option value=''>선택</option>
               <option value='010'>010</option>
@@ -144,8 +164,8 @@ export default function Consulting() {
               <input
                 className='input_phone'
                 type='text'
-                name='request_cellphone2'
-                id='request_cellphone2'
+                name='request_cellphone21'
+                id='request_cellphone21'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
@@ -155,8 +175,8 @@ export default function Consulting() {
               <input
                 className='input_phone'
                 type='text'
-                name='request_cellphone3'
-                id='request_cellphone3'
+                name='request_cellphone31'
+                id='request_cellphone31'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
@@ -171,8 +191,8 @@ export default function Consulting() {
             <div className='input_divc'>
               <input
                 type='text'
-                name='form_email'
-                id='form_email'
+                name='form_email1'
+                id='form_email1'
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
@@ -182,8 +202,8 @@ export default function Consulting() {
               <span>@</span>
               <input
                 type='text'
-                name='form_email_domain'
-                id='form_email_domain2'
+                name='form_email_domain1'
+                id='form_email_domain21'
                 value={emailDomain}
                 onChange={handleDomainChange}
                 onKeyDown={(e) => {
@@ -192,7 +212,7 @@ export default function Consulting() {
               ></input>
               <select
                 className='myselect'
-                id='form_email_domain'
+                id='form_email_domain1'
                 name=''
                 value=''
                 onChange={handleDomainChange}
@@ -208,8 +228,8 @@ export default function Consulting() {
           <div className='cborder_box'>
             <p className='con_p'>추가 내용</p>
             <textarea
-              name='form_content'
-              id='form_content'
+              name='form_content1'
+              id='form_content1'
               placeholder=' 추가문의 사항이 있는 경우 남겨주세요.'
               onKeyUp={handleChange}
             ></textarea>
@@ -236,7 +256,7 @@ export default function Consulting() {
             <input
               className='input_box'
               type='radio'
-              name='person_field'
+              name='person_field1'
               id='person_y'
               value='동의합니다.'
               onKeyDown={(e) => {
@@ -247,7 +267,7 @@ export default function Consulting() {
             <input
               className='input_box'
               type='radio'
-              name='person_field'
+              name='person_field1'
               id='person_n'
               value='동의하지 않습니다.'
               onKeyDown={(e) => {
@@ -270,7 +290,7 @@ export default function Consulting() {
               <input
                 className='input_box'
                 type='radio'
-                name='person_field2'
+                name='person_field21'
                 id='person_y2'
                 value='동의합니다.'
                 onKeyDown={(e) => {
@@ -281,7 +301,7 @@ export default function Consulting() {
               <input
                 className='input_box'
                 type='radio'
-                name='person_field2'
+                name='person_field21'
                 id='person_n2'
                 value='동의하지 않습니다.'
                 onKeyDown={(e) => {
