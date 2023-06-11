@@ -46,17 +46,26 @@ export default function Customer() {
     setWordCount(byteCount);
   }
 
+  const [visit_day2, setvisit_day2] = useState('');
+  const [form_name2, setform_name2] = useState('');
+  const [request_cellphone22, setrequest_cellphone22] = useState('');
+  const [request_cellphone32, setrequest_cellphone32] = useState('');
+  const [form_email2, setform_email2] = useState('');
+  const [form_title2, setform_title2] = useState('');
+  const [form_content2, setform_content2] = useState('');
+
   const validateForm2 = () => {
     if (
-      !name ||
-      !cellphone11 ||
-      !cellphone21 ||
-      !cellphone31 ||
-      !email1 ||
-      !emailDomain1 ||
-      !personField1
+      !visit_day2 ||
+      !form_name2 ||
+      !request_cellphone22 ||
+      !request_cellphone32 ||
+      !form_email2 ||
+      !emailDomain ||
+      !form_title2 ||
+      !form_content2
     ) {
-      alert('모든 필드를 입력하시오.');
+      alert('필수 필드를 입력하시오.');
       return false;
     }
     return true;
@@ -169,6 +178,8 @@ export default function Customer() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
+                  value={visit_day2}
+                  onChange={(e) => setvisit_day2(e.target.value)}
                 ></input>
               </div>
             </div>
@@ -281,6 +292,8 @@ export default function Customer() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
+                  value={form_name2}
+                  onChange={(e) => setform_name2(e.target.value)}
                 ></input>
               </div>
             </div>
@@ -311,6 +324,8 @@ export default function Customer() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
+                  value={request_cellphone22}
+                  onChange={(e) => setrequest_cellphone22(e.target.value)}
                 ></input>
               </div>
               <div className='input_div'>
@@ -322,6 +337,8 @@ export default function Customer() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
+                  value={request_cellphone32}
+                  onChange={(e) => setrequest_cellphone32(e.target.value)}
                 ></input>
               </div>
             </div>
@@ -338,6 +355,8 @@ export default function Customer() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
+                  value={form_email2}
+                  onChange={(e) => setform_email2(e.target.value)}
                 ></input>
               </div>
               <div className='input_div'>
@@ -378,6 +397,8 @@ export default function Customer() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.preventDefault();
                   }}
+                  value={form_title2}
+                  onChange={(e) => setform_title2(e.target.value)}
                 ></input>
               </div>
             </div>
@@ -392,6 +413,8 @@ export default function Customer() {
                 id='form_content2'
                 placeholder=' 추가문의 사항이 있는 경우 남겨주세요.'
                 onKeyUp={handleChange}
+                value={form_content2}
+                onChange={(e) => setform_content2(e.target.value)}
               ></textarea>
             </div>
             <div className='left_box1'>

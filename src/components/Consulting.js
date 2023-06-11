@@ -45,17 +45,22 @@ export default function Consulting() {
     setWordCount(byteCount);
   }
 
+  const [form_name1, setform_name1] = useState('');
+  const [request_cellphone21, setrequest_cellphone21] = useState('');
+  const [request_cellphone31, setrequest_cellphone31] = useState('');
+  const [form_email1, setform_email1] = useState('');
+  const [personField1, setPersonField1] = useState('');
+
   const validateForm1 = () => {
     if (
-      !name ||
-      !cellphone11 ||
-      !cellphone21 ||
-      !cellphone31 ||
-      !email1 ||
-      !emailDomain1 ||
+      !form_name1 ||
+      !request_cellphone21 ||
+      !request_cellphone31 ||
+      !form_email1 ||
+      !emailDomain ||
       !personField1
     ) {
-      alert('모든 필드를 입력하시오.');
+      alert('필수 필드를 입력하시오.');
       return false;
     }
     return true;
@@ -139,6 +144,8 @@ export default function Consulting() {
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
+                value={form_name1}
+                onChange={(e) => setform_name1(e.target.value)}
               ></input>
             </div>
           </div>
@@ -169,6 +176,8 @@ export default function Consulting() {
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
+                value={request_cellphone21}
+                onChange={(e) => setrequest_cellphone21(e.target.value)}
               ></input>
             </div>
             <div className='input_divc'>
@@ -180,6 +189,8 @@ export default function Consulting() {
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
+                value={request_cellphone31}
+                onChange={(e) => setrequest_cellphone31(e.target.value)}
               ></input>
             </div>
           </div>
@@ -196,6 +207,8 @@ export default function Consulting() {
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') e.preventDefault();
                 }}
+                value={form_email1}
+                onChange={(e) => setform_email1(e.target.value)}
               ></input>
             </div>
             <div className='input_divc'>
@@ -262,6 +275,7 @@ export default function Consulting() {
               onKeyDown={(e) => {
                 if (e.key === 'Enter') e.preventDefault();
               }}
+              onChange={(e) => setPersonField1(e.target.value)}
             ></input>
             <label htmlFor='person_y'>동의합니다.</label>
             <input
