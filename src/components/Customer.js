@@ -92,8 +92,8 @@ export default function Customer() {
       request_cellphone22: form.request_cellphone22.value,
       request_cellphone32: form.request_cellphone32.value,
       form_email2: form.form_email2.value,
-      form_email_domain2: form.form_email_domain2.value,
-      form_title2: form.form_title2.value,
+      form_email_domain2: form.form_email_domain22.value,
+      form_title2: form.form_title2.value2,
       form_content2: form.form_content2.value,
     };
 
@@ -125,8 +125,8 @@ export default function Customer() {
     document.getElementById('request_cellphone22').value = '';
     document.getElementById('request_cellphone32').value = '';
     document.getElementById('form_email2').value = '';
-    document.getElementById('form_email_domain2').value = '';
-    document.getElementById('form_title2').value = '';
+    document.getElementById('form_email_domain22').value = '';
+    document.getElementById('form_title2').val2ue = '';
     document.getElementById('form_content2').value = '';
   };
 
@@ -364,7 +364,7 @@ export default function Customer() {
                 <input
                   type='text'
                   name='form_email_domain2'
-                  id='form_email_domain2'
+                  id='form_email_domain22'
                   value={emailDomain}
                   onChange={handleDomainChange}
                   onKeyDown={(e) => {
@@ -375,6 +375,7 @@ export default function Customer() {
                   className='myselect'
                   id='form_email_domain2'
                   name=''
+                  value=''
                   onChange={handleDomainChange}
                 >
                   <option value=''>직접입력</option>
